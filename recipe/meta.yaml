@@ -11,7 +11,9 @@ source:
 build:
   number: 0
   skip: True  # [py2k]
-  script: {{PYTHON}} -m flit install --deps=none
+  script:
+    - export FLIT_ROOT_INSTALL=1   # [unix]
+    - {{PYTHON}} -m flit install --deps=none
 
 requirements:
   host:
