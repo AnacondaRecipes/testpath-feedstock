@@ -9,7 +9,7 @@ source:
   sha256: e4824c689b97e3cfc76b440add3d20a4bb28a671079787a3d07a6bc3ba3d1eca
 
 build:
-  number: 0
+  number: 1
   skip: True  # [py2k]
   script:
     - export FLIT_ROOT_INSTALL=1   # [unix]
@@ -18,7 +18,7 @@ build:
 requirements:
   host:
     - python
-    - flit
+    - flit >=1.2.1
   run:
     - python
 
