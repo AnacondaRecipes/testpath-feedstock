@@ -17,13 +17,19 @@ requirements:
   host:
     - python >=3.6
     - pip
-    - flit
+    - flit >=3.2.0,<3.3
+    - wheel
+    - setuptools
   run:
-    - python
+    - python >=3.6
 
 test:
   imports:
     - testpath
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://testpath.readthedocs.io
