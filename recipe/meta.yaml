@@ -1,4 +1,4 @@
-{% set version = "0.4.4" %}
+{% set version = "0.5.0" %}
 
 package:
   name: testpath
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/testpath/testpath-{{ version }}.tar.gz
-  sha256: 60e0a3261c149755f4399a1fff7d37523179a70fdc3abdf78de9fc2604aeec7e
+  sha256: 1acf7a0bcd3004ae8357409fc33751e16d37ccc650921da1094a86581ad1e417
 
 build:
   number: 0
@@ -17,13 +17,19 @@ requirements:
   host:
     - python >=3.6
     - pip
-    - flit
+    - flit >=3.2.0,<3.3
+    - wheel
+    - setuptools
   run:
-    - python
+    - python >=3.6
 
 test:
   imports:
     - testpath
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://testpath.readthedocs.io
