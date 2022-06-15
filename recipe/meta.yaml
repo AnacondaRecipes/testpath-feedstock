@@ -10,18 +10,18 @@ source:
 
 build:
   number: 0
-  noarch: python
+  skip: True  # [py<36]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
 
 requirements:
   host:
-    - python >=3.5
+    - python
     - pip
     - flit >=3.2.0,<4
     - wheel
     - setuptools
   run:
-    - python >=3.5
+    - python
 
 test:
   imports:
