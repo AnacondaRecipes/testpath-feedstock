@@ -17,9 +17,10 @@ requirements:
   host:
     - python
     - pip
-    - flit >=3.2.0,<4
+    - flit-core >=3.2.0,<4
     - wheel
     - setuptools
+    - setuptools-scm !=6.1.1
   run:
     - python
 
